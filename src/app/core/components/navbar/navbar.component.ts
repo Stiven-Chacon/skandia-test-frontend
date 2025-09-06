@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { SidebarComponent } from "../sidebar/sidebar.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  imports: [SidebarComponent]
+  standalone: true,
+  imports: [SidebarComponent, RouterModule]
 })
 export class NavbarComponent {
   @Input() title: string = 'Plan Financiero Digital - FPX';

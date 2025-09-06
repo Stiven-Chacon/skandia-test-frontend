@@ -1,21 +1,15 @@
 <!-- Overlay -->
-<div
-  *ngIf="isOpen"
-  class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"
-  style="z-index: 1040"
-  (click)="onClose()"
-></div>
+<div *ngIf="isOpen" class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50" style="z-index: 1040"
+  (click)="onClose()"></div>
 
 <!-- Sidebar -->
-<div
-  class="position-fixed top-0 start-0 h-100 bg-white shadow-lg"
-  [ngStyle]="{
+<div class="position-fixed top-0 start-0 h-100 shadow-lg" [ngStyle]="{
     width: '280px',
     zIndex: 1050,
     transform: isOpen ? 'translateX(0)' : 'translateX(-100%)',
-    transition: 'transform 0.3s ease-in-out'
-  }"
->
+    transition: 'transform 0.3s ease-in-out',
+    background: '#E2E2E2'
+  }">
   <!-- Header -->
   <div class="d-flex align-items-center justify-content-between p-4 border-bottom">
     <div class="h5 mb-0 fw-bold text-skandia-green">skandia</div>
@@ -25,16 +19,20 @@
   </div>
 
   <!-- Menú -->
-  <nav class="sidebar-nav">
-    <ul>
-      <li *ngFor="let item of menuItems">
-        <a [routerLink]="item.href" routerLinkActive="active">
-          <img [src]="item.icon" [alt]="item.label" width="20" height="20" class="me-2" />
-          <span>{{ item.label }}</span>
-        </a>
-      </li>
+<nav class="sidebar-nav" [class.collapsed]="collapsed">
+  <ul>
+    <li *ngFor="let item of menuItems; let i = index">
+      <a [routerLink]="item.href"
+         [class.active]="i === activeIndex"
+         (click)="setActive(i)">
+        <img [src]="item.icon" [alt]="item.label" width="20" height="20" />
+        <span class="label">{{ item.label }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
-    </ul>
-  </nav>
+
+
 
 </div>
