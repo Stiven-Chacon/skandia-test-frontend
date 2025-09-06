@@ -1,0 +1,53 @@
+<footer class="bg-white border-top py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="d-flex align-items-center mb-4">
+          <img src="assets/icons/Group 123.svg" alt="planner" width="200" height="30" />
+        </div>
+
+        <p class="mb-3 fw-semibold">© 2019 Skandia</p>
+
+        <div class="text-muted small">
+          <p class="mb-1"><strong>PBX:</strong> <span style="color: var(--background-color-principal);">{{
+              contactInfo.pbx }}</span></p>
+          <p class="mb-1"><strong>Línea nacional:</strong> <span style="color: var(--background-color-principal);">{{
+              contactInfo.nationalLine }}</span></p>
+          <p class="mb-1"><strong>Línea Corporativa:</strong> {{ contactInfo.corporateLine }}</p>
+          <p class="mb-1">{{ contactInfo.address }}</p>
+          <p class="mb-1">{{ contactInfo.city }}, {{ contactInfo.country }}</p>
+          <p class="mb-0 fw-semibold">Oficinas a nivel nacional</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column">
+        <div class="mt-auto mb-3">
+          <ng-container *ngFor="let link of footerLinks">
+            <a [href]="link.href" class="d-block text-muted mb-1" style="transition: color 0.2s;">
+              {{ link.label }}
+            </a>
+          </ng-container>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4 d-flex flex-column align-items-start align-items-md-end">
+        <div class="mt-auto d-flex gap-4">
+          <a href="#" class="text-muted" style="transition: color 0.2s;">
+            <img src="assets/icons/footer/facebookl.svg" alt="facebook" width="32" height="32" />
+          </a>
+          <a href="#" class="text-muted" style="transition: color 0.2s;">
+            <img src="assets/icons/footer/youtube.svg" alt="youtube" width="32" height="32" />
+          </a>
+          <a href="#" class="text-muted" style="transition: color 0.2s;">
+            <img src="assets/icons/footer/twitter.svg" alt="twitter" width="32" height="32" />
+          </a>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</footer>
