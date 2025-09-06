@@ -16,11 +16,14 @@
         border-radius: 6px;
         text-decoration: none;
         color: black;
-        transition: background 0.2s;
+        transition: all 0.3s;
 
-        mat-icon {
+        img {
           margin-right: 0.75rem;
-          color: black;
+        }
+
+        .label {
+          transition: opacity 0.3s;
         }
 
         &:hover {
@@ -30,12 +33,29 @@
         &.active {
           background-color: var(--background-color-principal);
           color: white;
-          font-weight: 500;
 
-          mat-icon {
-            color: white;
+          img {
+            filter: brightness(0) invert(1);
           }
         }
+      }
+    }
+  }
+
+  &.collapsed {
+    ul li a {
+      justify-content: center;
+
+      .label {
+        opacity: 0;
+        width: 0;
+        margin: 0;
+        pointer-events: none;
+      }
+
+      &.active {
+        background-color: var(--background-color-principal);
+        color: white;
       }
     }
   }
