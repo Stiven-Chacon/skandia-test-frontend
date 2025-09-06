@@ -1,38 +1,44 @@
-<nav class="border-bottom px-4 py-3" style="border-color: #dee2e6">
-  <div class="container-fluid d-flex align-items-center justify-content-between">
+<nav class="border-bottom px-3 px-sm-4 py-3">
+  <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
 
     <!-- Logo y título -->
-    <div class="d-flex align-items-center">
-      <button class="hamburger-btn" (click)="toggleSidebar()" aria-label="Menu">
+    <div class="d-flex align-items-center flex-shrink-1">
+      <button class="hamburger-btn me-5" (click)="toggleSidebar()" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="d-flex align-items-center">
-        <img src="assets/icons/Group 123.svg" alt="planner" width="119" height="20" class="me-1" />
-        <span class="text-dark fs-4 me-2">|</span>
-        <span class="text-dark fw-medium">{{ title }}</span>
+
+      <div class="d-flex align-items-center text-truncate">
+        <!-- Logo: más pequeño en móviles -->
+        <img
+          src="assets/icons/Group 123.svg"
+          alt="planner"
+          class="me-1"
+          width="119" height="20"
+          srcset="assets/icons/Group 123.svg 119w"
+        />
+        <span class="text-dark fs-4 me-2 d-none d-md-inline">|</span>
+
+        <span class="text-dark fw-medium text-truncate d-none d-md-inline">{{ title }}</span>
       </div>
     </div>
 
-    <!-- Botones de acción -->
-    <div class="d-flex align-items-center gap-3">
-      <button class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none">
-        <img src="assets/icons/Happy.svg" alt="planner" width="24" height="24" class="me-1" />
-        <span class="d-none d-sm-inline">Tu Financial Planner</span>
+    <div class="d-flex align-items-center gap-2 flex-wrap justify-content-end mt-2 mt-sm-0">
+      <button class="btn btn-link text-skandia-green fw-medium p-0 me-2 d-flex align-items-center text-decoration-none">
+        <img src="assets/icons/Happy.svg" alt="planner" width="24" height="24" class="me-0 me-sm-1" />
+        <span class="d-none d-sm-inline" style="color: var(--background-color-principal);">Tu Financial Planner</span>
       </button>
 
-      <button class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none">
-        <img src="assets/icons/hand3.svg" alt="aportes" width="24" height="24" class="me-1" />
-        <span class="d-none d-sm-inline">Aportes</span>
+      <button class="btn btn-link text-skandia-green fw-medium p-0 me-2 d-flex align-items-center text-decoration-none">
+        <img src="assets/icons/hand3.svg" alt="aportes" width="24" height="24" class="me-0 me-sm-1" />
+        <span class="d-none d-sm-inline" style="color: var(--background-color-principal);">Aportes</span>
       </button>
 
-      <button class="btn btn-warning rounded-circle p-2" style="background-color: #fd79a8; border-color: #fd79a8">
         <img src="assets/icons/comp faq.svg" alt="help" width="32" height="32" />
-      </button>
     </div>
+
   </div>
 </nav>
 
 <app-sidebar [isOpen]="isSidebarOpen" [collapsed]="!isSidebarOpen"></app-sidebar>
-
