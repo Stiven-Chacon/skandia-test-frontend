@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ObjectivecardComponent } from '../../shared/components/objectivecard/objectivecard.component';
+import { ProgressMessageComponentComponent } from "../../shared/components/progress-message-component/progress-message-component.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ObjectivecardComponent],
+  imports: [CommonModule, ObjectivecardComponent, ProgressMessageComponentComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
