@@ -1,17 +1,21 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SidebarComponent } from "../sidebar/sidebar.component";
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss'],
+  imports: [SidebarComponent]
 })
 export class NavbarComponent {
   @Input() title: string = 'Plan Financiero Digital - FPX';
-  @Output() menuClick = new EventEmitter<void>();
+  isSidebarOpen = false;
 
-    onMenuClick() {
-    this.menuClick.emit();
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
 
+  closeSidebar() {
+    this.isSidebarOpen = false;
+  }
 }

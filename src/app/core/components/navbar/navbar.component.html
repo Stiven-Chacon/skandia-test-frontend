@@ -1,46 +1,38 @@
-<nav class="bg-white border-bottom px-4 py-3" style="border-color: #dee2e6">
+<nav class="border-bottom px-4 py-3" style="border-color: #dee2e6">
   <div class="container-fluid d-flex align-items-center justify-content-between">
 
     <!-- Logo y título -->
     <div class="d-flex align-items-center">
-      <button
-        class="btn btn-link p-0 me-3"
-        style="color: #6c757d"
-        (click)="onMenuClick()"
-      >
-        <img src="assets/icons/hand3.svg" alt="menu" width="24" height="24" />
+      <button class="hamburger-btn" (click)="toggleSidebar()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-
       <div class="d-flex align-items-center">
-        <div class="h4 mb-0 fw-bold text-skandia-green me-2">skandia</div>
-        <span class="text-muted me-2">|</span>
+        <img src="assets/icons/Group 123.svg" alt="planner" width="119" height="20" class="me-1" />
+        <span class="text-dark fs-4 me-2">|</span>
         <span class="text-dark fw-medium">{{ title }}</span>
       </div>
     </div>
 
     <!-- Botones de acción -->
     <div class="d-flex align-items-center gap-3">
-      <button
-        class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none"
-      >
+      <button class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none">
         <img src="assets/icons/Happy.svg" alt="planner" width="24" height="24" class="me-1" />
         <span class="d-none d-sm-inline">Tu Financial Planner</span>
       </button>
 
-      <button
-        class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none"
-      >
+      <button class="btn btn-link text-skandia-green fw-medium p-0 me-3 text-decoration-none">
         <img src="assets/icons/hand3.svg" alt="aportes" width="24" height="24" class="me-1" />
         <span class="d-none d-sm-inline">Aportes</span>
       </button>
 
-      <button
-        class="btn btn-warning rounded-circle p-2"
-        style="background-color: #fd79a8; border-color: #fd79a8"
-      >
+      <button class="btn btn-warning rounded-circle p-2" style="background-color: #fd79a8; border-color: #fd79a8">
         <img src="assets/icons/comp faq.svg" alt="help" width="32" height="32" />
       </button>
     </div>
-
   </div>
 </nav>
+
+<app-sidebar [isOpen]="isSidebarOpen" [collapsed]="!isSidebarOpen"></app-sidebar>
+
