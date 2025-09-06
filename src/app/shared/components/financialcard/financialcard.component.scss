@@ -1,0 +1,75 @@
+.horizontal-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.financial-card {
+    min-width: 400px;
+    max-width: 600px;
+    flex-shrink: 0;
+}
+
+.placeholder-glow .placeholder {
+    animation: placeholder-glow 2s ease-in-out infinite alternate;
+}
+
+.d-flex.justify-content-center > .horizontal-scroll {
+    justify-content: start;
+}
+
+.btn-custom {
+  background-color: #f1f1f1;
+  color: #1a1a1a;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+
+  /* Hover */
+  &:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+    color: #333;
+  }
+
+  /* Disabled */
+  &:disabled {
+    background-color: #ddd;
+    border-color: #bbb;
+    color: #999;
+    cursor: not-allowed;
+  }
+}
+
+.financial-card .card {
+  transition: all 0.3s ease;
+  border: 2px solid #ccc;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover */
+.financial-card .card:hover {
+  border-color: var(--background-color-principal);;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
