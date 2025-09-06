@@ -1,0 +1,18 @@
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    display: block;
+    height: 3px;
+    background-color: var(--background-color-principal);
+    border-radius: 2px;
+  }
+}
