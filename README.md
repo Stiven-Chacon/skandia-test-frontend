@@ -1,59 +1,57 @@
-# SkandiaTest
+# Prueba Front-End Skandia
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+## Objetivo
+Esta prueba tiene como objetivo evidenciar habilidades en el desarrollo y maquetación de experiencias web aplicando las mejores prácticas, trabajando con tecnologías como HTML, CSS, SASS, JavaScript y Angular.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías Utilizadas
+
+- **Angular** (última versión estable)
+- **TypeScript**
+- **HTML5**
+- **CSS3 / SASS**
+- **Bootstrap / Angular Material** (solo cuando fue necesario, mayormente código nativo)
+- **HTTPClient** para consumo de API
+
+---
+
+## Funcionalidades Implementadas
+
+- Pantalla completamente responsive según el diseño en Adobe XD: [Link al diseño](https://xd.adobe.com/view/7520751b-2b53-4b0f-9613-527817e8cc92-2073/specs/)
+- Consumo de API para tarjetas:  
+  `https://62e152f8fa99731d75d44571.mockapi.io/api/v1/test-front-end-skandia/cards`
+- Iteración dinámica de tarjetas según estructura JSON.
+- Sidebar y navegación responsive.
+- Manejo de errores y excepciones en la aplicación.
+- Código limpio, documentado y modular.
+- Componentes Angular Standalone para mejorar reusabilidad.
+
+---
+
+
+---
+
+## Instalación y Ejecución
+
+1. Clonar el repositorio:
 
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Stiven-Chacon/skandia-test-frontend
+cd skandia-test-frontend
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Ejecutar la aplicación en modo desarrollo
 ng serve
+
+# 4. Abrir la aplicación en el navegador
+# Accede a: http://localhost:4200
+
+
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
