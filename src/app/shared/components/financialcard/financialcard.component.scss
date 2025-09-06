@@ -1,0 +1,36 @@
+.horizontal-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.financial-card {
+    min-width: 400px;
+    max-width: 600px;
+    flex-shrink: 0;
+}
+
+.placeholder-glow .placeholder {
+    animation: placeholder-glow 2s ease-in-out infinite alternate;
+}
+
+.d-flex.justify-content-center > .horizontal-scroll {
+    justify-content: start;
+}
